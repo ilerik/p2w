@@ -2,16 +2,18 @@
   "name": "p2w",
   "version": "1.0.0",
   "license": "(MIT AND Apache-2.0)",
-  "scripts": {    
+  "scripts": {
     "deploy": "cd contract && ./deploy.sh",
-    "deploy:testnet": "cd contract && deploy.sh",
+    "deploy:testnet": "node contract/deploy.testnet.js",
     "build": "cd contract && ./build.sh",
     "test": "npm run test:unit && npm run test:integration",
     "test:unit": "cd contract && cargo test",
-    "test:integration": "cd integration-tests && npm test -- -- \"./contract/target/wasm32-unknown-unknown/release/p2w.wasm\""    
+    "test:integration": "cd integration-tests && npm test -- -- \"./contract/target/wasm32-unknown-unknown/release/p2w.wasm\""
   },
   "devDependencies": {
     "near-cli": "^3.3.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "shelljs": "^0.8.5"
+  }
 }

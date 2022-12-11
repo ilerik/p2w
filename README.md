@@ -12,7 +12,7 @@ npm run deploy
 
 ## Deployment status:
 
-- NEAR testnet: TBD
+- NEAR testnet: [p2w-v1.ilerik.testnet](https://explorer.testnet.near.org/accounts/p2w-v1.ilerik.testnet)
 - NEAR mainnet: TBD
 
 ## Game flow
@@ -42,6 +42,7 @@ _finish_game( result != outcome )_
 |
 
 // Captains declared different outcomes admins need to resolve manually
+
 Disputed-->_resolve_game(outcome)_-->Resolved { outcome }
 
 To run [integration tests](/integration-tests/src/main.ava.ts) covering the above flows:
